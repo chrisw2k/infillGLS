@@ -1,0 +1,65 @@
+name = "InfillGLSLean"
+version = "0.1.0"
+defaultTargets = ["InfillGLSLean", "InfillGLSManuscript"]
+leanOptions = { autoImplicit = false }
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "InfillGLSLean"
+
+[[lean_lib]]
+name = "InfillGLSManuscript"
+srcDir = "Manuscript"
+needs = ["InfillGLSLean"]
+leanOptions = { autoImplicit = true }
+roots = [
+  "ManuscriptEndpoints",
+  "ExternalConsumer",
+  "ManuscriptSpecification",
+  "«L-023-fwl-source-bridge».Explore",
+  "«L-025-api-fubini-integration».RegionalMeanCompatibility",
+  "«L-026-nonnested-regional-averaging».NonnestedRegionalAveraging",
+  "«L-027-api-fwl-integration».FWLIntegration",
+  "«L-029-consistency-integration».Explore",
+  "«L-032-finite-wick-bridge».WickBridge",
+  "«L-033-normal-cdf-calibration».Explore",
+  "«L-033-normal-cdf-calibration».SourceQuantileBridge",
+  "«L-034-normality-exact-integration».Explore",
+  "«L-035-variance-exact-integration».Explore",
+  "«L-036-mean-hilbert-riesz».MeanHilbertRiesz",
+  "«L-037-mean-common-refinement».CommonRefinement",
+  "«L-037-mean-common-refinement».GaussMarkov",
+  "«L-038-mean-weight-perturbation».Explore",
+  "«L-038-mean-weight-perturbation».SourceBridges",
+  "«L-039-mean-source-common-refinement».SourceCommonRefinement",
+  "«L-040-mean-information-limit».InformationLimit",
+  "«L-041-common-refinement-pd».CommonRefinementPD",
+  "«L-042-mean-tail-pd».TailPositiveDefiniteness",
+  "«L-043-mean-refinement-convergence».RefinementConvergence",
+  "«L-044-mean-true-gls-weak».TrueGLSWeak",
+  "«L-045-mean-covariance-equivalence».CovarianceEquivalence",
+  "«L-046-residual-scale-source».ScalarMomentBridge",
+  "«L-046-residual-scale-source».ResidualScaleBridge",
+  "«L-047-mean-information-assembly».InformationAssembly",
+  "«L-048-mean-treatment-variance-sandwich».TreatmentVarianceSandwich",
+  "«L-049-mean-projected-design-limit».ProjectedDesignLimit",
+  "«L-050-mean-weak-score-integration».WeakScoreIntegration",
+  "«L-051-mean-working-true-bias».WorkingTrueBias",
+  "«L-052-mean-representer-evaluation».RepresenterEvaluation",
+  "«L-053-centered-score-normality».CenteredScoreNormality",
+  "«L-054-mean-bias-integration».MeanBiasIntegration",
+  "«L-055-normality-final-integration».FinalNormality",
+  "«L-057-working-estimator-variance».WorkingEstimatorVariance",
+  "«L-058-working-estimator-variance-limit».WorkingEstimatorVarianceLimit",
+  "«L-059-reported-variance-ratios».ReportedVarianceRatios",
+  "«L-061-literal-studentization».Studentization",
+  "«L-062-coverage-support».CoverageSupport",
+  "«L-063-variance-final-integration».FinalVariance",
+  "«L-064-residual-scale-rate».ResidualScaleRate",
+  "«L-064-residual-scale-rate».StochasticOrder",
+  "«L-065-literal-mean-bias».LiteralMeanBias"
+]

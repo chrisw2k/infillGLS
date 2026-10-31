@@ -1,0 +1,27 @@
+# The public release contains only the two standalone components and this
+# concise landing page. All other local project materials remain untracked.
+/*
+!/.gitignore
+!/README.md
+!/lib/
+!/lib/infillgls/
+!/lib/infillgls/**
+!/lib/InfillGLSLean/
+!/lib/InfillGLSLean/**
+
+# Local agent instructions and build/session artifacts.
+/lib/infillgls/AGENTS.md
+/lib/InfillGLSLean/AGENTS.md
+/lib/InfillGLSLean/.lake/
+/lib/infillgls.Rcheck/
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.olean
+*.olean.private
+*.olean.server
+*.ilean
+*.ir
+*.ir.sig
+.vscode/
